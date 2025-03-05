@@ -11,7 +11,7 @@ const Greeting = () => {
 
   const onSetGreetingSuccess = () => {
     toast.success(`Successfully set your new greeting`, {
-      position: toast.POSITION.BOTTOM_CENTER,
+      position: "bottom-center",
       autoClose: 3000,
       hideProgressBar: true,
       closeOnClick: true,
