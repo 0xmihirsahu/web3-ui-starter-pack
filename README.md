@@ -1,9 +1,9 @@
-
 # Web3 UI Starter Pack
 
 A front-end dApp starter built with Next.js (React), designed for fast development. This starter pack comes pre-configured with essential libraries and tools, so you can skip the setup and dive straight into building your Web3 project.
 
 ## Built With
+
 - **Next.js**: A popular React framework for building fast, server-side rendered applications.
 - **wagmi**: React hooks for Ethereum.
 - **viem**: Ethereum interface for developers.
@@ -13,17 +13,20 @@ A front-end dApp starter built with Next.js (React), designed for fast developme
 ## Getting Started
 
 ### Prerequisites
+
 1. **Node.js**: Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/yourusername/web3-ui-starter-pack.git
    cd web3-ui-starter-pack
    ```
 
 2. **Install dependencies**:
+
    ```bash
    pnpm install
    #or
@@ -31,6 +34,7 @@ A front-end dApp starter built with Next.js (React), designed for fast developme
    ```
 
 3. **Set up environment variables**:
+
    - Create a `.env.local` file in the root of your project.
    - Add the following variables:
      ```bash
@@ -45,9 +49,11 @@ A front-end dApp starter built with Next.js (React), designed for fast developme
 ### Running the App
 
 Start the development server:
+
 ```bash
 yarn run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
 ## Usage

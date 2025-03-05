@@ -7,24 +7,24 @@ function flattenColorPalette(colors: Record<string, any>) {
   return Object.assign(
     {},
     ...Object.entries(colors).flatMap(([color, values]) => {
-      if (typeof values !== 'object') {
+      if (typeof values !== "object") {
         return { [color]: values };
       }
-      
+
       return Object.entries(values).map(([key, value]) => {
         return { [`${color}-${key}`]: value };
       });
-    })
+    }),
   );
 }
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -103,9 +103,9 @@ export default config;
 function addVariablesForColors({ addBase, theme }: any) {
   const flattenedColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
-    Object.entries(flattenedColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(flattenedColors).map(([key, val]) => [`--${key}`, val]),
   );
- 
+
   addBase({
     ":root": newVars,
   });

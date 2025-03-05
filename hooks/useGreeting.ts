@@ -45,15 +45,13 @@ const useGreeting = ({
     isError: setGreetingError,
   } = useWriteContract();
 
-  const {
-    isSuccess: txSuccess,
-    isLoading: txLoading,
-  } = useWaitForTransactionReceipt({
-    hash: setGreetingHash,
-    query: {
-      enabled: Boolean(setGreetingHash),
-    }
-  });
+  const { isSuccess: txSuccess, isLoading: txLoading } =
+    useWaitForTransactionReceipt({
+      hash: setGreetingHash,
+      query: {
+        enabled: Boolean(setGreetingHash),
+      },
+    });
 
   useEffect(() => {
     if (txSuccess) {
@@ -67,12 +65,13 @@ const useGreeting = ({
     greeting: greeting as string,
     getGreetingLoading,
     getGreetingError,
-    setGreeting: () => setGreeting?.({
-      address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
-      abi,
-      functionName: "setGreeting",
-      args: [newGreeting],
-    }),
+    setGreeting: () =>
+      setGreeting?.({
+        address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
+        abi,
+        functionName: "setGreeting",
+        args: [newGreeting],
+      }),
     setGreetingLoading: setGreetingLoading || txLoading,
     prepareSetGreetingError: newGreeting === undefined,
     setGreetingError,
