@@ -1,6 +1,6 @@
 # Web3 UI Starter Pack
 
-A front-end dApp starter built with Next.js (React), designed for fast development. This starter pack comes pre-configured with essential libraries and tools, so you can skip the setup and dive straight into building your Web3 project.
+A front-end dApp starter built with Next.js, designed for fast development. This starter pack comes pre-configured with essential libraries and tools, so you can skip the setup and dive straight into building your Web3 project.
 
 ## Built With
 
